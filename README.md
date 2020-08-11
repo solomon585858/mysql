@@ -1,5 +1,5 @@
-# MySQL
-Repository for MySQL Training
+# mysql
+MySQL Repository for training
 
 ## Homework 1
  - В рамках первого ДЗ была подготовлена виртуальная машина на базе **Ubuntu 20**, на которой был установлен **MySQL 8.0** и проведена его базовая настройка
