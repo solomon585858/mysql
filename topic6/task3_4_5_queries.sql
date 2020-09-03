@@ -12,7 +12,7 @@ SELECT
  (SELECT(CONCAT(first_name, ' ', last_name)) FROM users WHERE users.id = likes.target_id) AS name,
  (SELECT birthday from profiles WHERE profiles.user_id = likes.target_id) AS birthday,
   COUNT(*) AS 'Number of likes'  
-FROM likes
+FROM likes WHERE target_type_id = 2
 GROUP BY target_id
 ORDER BY birthday DESC LIMIT 10;
 
