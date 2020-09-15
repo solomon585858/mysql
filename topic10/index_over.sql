@@ -17,7 +17,7 @@ SELECT DISTINCT c.name,
   MAX(p.birthday) OVER w AS youngest,
   MIN(p.birthday) OVER w AS oldest,
   COUNT(*) OVER w AS 'total in group',
-  COUNT(*) OVER() AS 'total',
+  (SELECT COUNT(*) FROM profiles) AS 'total',
   COUNT(*) OVER w / COUNT(*) OVER() * 100 AS "%%"
     FROM communities AS c
      JOIN communities_users AS cu
